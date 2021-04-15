@@ -1,0 +1,140 @@
+/* CSS Document */
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+.loader {
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  width: 30%;
+  
+  border: 16px solid #f3f3f3; /* Light grey */
+/*  border-top: 16px solid #3498db;  Blue */
+  border-left: 16px solid #3498db; /* Blue */
+  border-right: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#blocker {
+/*  display: none;*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+#instructions {
+  width: 100%;
+  height: 100%;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 24px;
+
+  cursor: pointer;
+}
+
+/*
+#crosshair {
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+}
+*/
+
+#cross {
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  
+   width: 25px;
+   height: 25px;
+/*   position: relative;*/
+  z-index: 1;
+}
+
+#cross:before, #cross:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #FFF;
+}
+
+#cross:before {
+  left: 50%;
+  width: 1%;
+/*  margin-left: -15%;*/
+  height: 100%;
+}
+
+#cross:after {
+  top: 50%;
+  height: 1%;
+/*  margin-top: -15%;*/
+  width: 100%;
+}
+
+#labels {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+}
+
+#custConsole {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 150px;
+  width: 200px;
+  background-color: rgba(16,39,66,0.6);
+  padding: 12px 0px;
+  overflow-y: scroll;
+}
+
+#custConsole p {
+  color: #10f5f5;
+  font-size: 12px;
+}
